@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Social-App
 
-## Available Scripts
+## API function
 
-In the project directory, you can run:
+To know in the first hour of the video:
 
-### `yarn start`
+1. Install you project with react and firebase.
+hint (create firebase and go to folder function)
+need this to initialize the project. curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+2. Create a function helloworld.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Create a function "Screams" that fetch the posts in your database.
+hint: you require admin package. (~) 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+4. Create a function "createScream" that add a post to the database.(~)
 
-### `yarn test`
+5. Protect your function of bad request methods. (+)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Install Express for the requests. (+)
 
-### `yarn build`
+7. Add the userId and the ascending user name order to the data fetching
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. Use ISO date (+)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+9. Change the region of the api (+)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+10. Bild a user Registration.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Question
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+why i cannot launch postman from the console:
+https://askubuntu.com/questions/1102213/no-in-the-uri
+https://www.tecmint.com/create-alias-in-linux/
+https://unix.stackexchange.com/questions/16242/problem-with-path-and-executable-file#16248
