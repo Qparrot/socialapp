@@ -1,4 +1,4 @@
-const db = require('../util/admin.js');
+const { db } = require('../util/admin.js');
 
 exports.getAllScreams = (req, res) => {
 	db.collection('screams').orderBy('createdAt', 'desc').get()
@@ -24,7 +24,6 @@ exports.addScream = (req, res) => {
 		userHandle: req.user.handle,
 		createdAt: new Date().toISOString()
 	};
-
 	db.collection('screams').add(newScream)
 		.then(doc => {
 			res.json({ message: `document ${doc.id} created successfully`});
