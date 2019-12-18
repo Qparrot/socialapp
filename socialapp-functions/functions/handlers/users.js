@@ -1,6 +1,6 @@
 const { db, admin } = require('../util/admin.js');
 const config = require('../util/config.js');
-const { validateSignUpData, validateSignInData } = require('../util/validaters.js');
+const { validateSignUpData, validateSignInData, validateUserData } = require('../util/validaters.js');
 const firebase = require('firebase');
 firebase.initializeApp(config);
 
@@ -86,6 +86,39 @@ exports.signUp = (req, res) => {
 		})
 };
 
+exports.addUserData = (req, res) => {
+	let userData = validateUserData(req.body);
+
+		db.doc(`/users/${req.user.handle}`).update(userData)
+		.then( () => {
+			return res.status(200).json("New data added");
+		})
+		.catch((err) => {
+			console.error(err)
+			return res.status(400).json({error: err.code});
+		});
+	};
+exports.getAuthentificatedUser = (req,res) => {
+	let userData = {};
+	db.doc(`/users/${req.user.handle}`).get()
+		.then(doc => {
+			if(doc.exists) {
+				userData.credentials = doc.data();
+				return db.collection('likes').where('userHandle', '==', req.user.handle).get()
+			}
+		})
+		.then(data => {
+			userData.likes = [];
+			data.forEach(doc => {
+				userData.likes.push(doc.data());
+			});
+			return res.json(userData);
+		})
+		.catch(err => {
+			console.error(err);
+			res.status(500).json({error: err.code});
+		});
+};
 exports.uploadImage = (req, res) => {
 	const BusBoy = require('busboy');
 	const path = require('path');
@@ -133,3 +166,5 @@ exports.uploadImage = (req, res) => {
 	});
 	busboy.end(req.rawBody);
 };
+
+

@@ -13,6 +13,24 @@ const isEmpty = (string) => {
 		return false;
 }
 
+exports.validateUserData = (data) => {
+	let userData = {};
+	
+	if(data.bio.trim() !== '')
+		userData.bio = data.bio.trim();
+	if(data.location.trim() !== '')
+		userData.location = data.location.trim();
+	if(data.website.trim() !== '')
+	{
+		if(data.website.trim().substring(0, 4) === 'http')
+			userData.website = data.website.trim();
+		else
+			userData.website = `http://${data.website.trim()}`;
+	}
+	return  userData;
+	
+}
+
 exports.validateSignUpData = (data) => {
 	let errors = {};
 	if(isEmpty(data.email))

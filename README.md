@@ -1,5 +1,9 @@
 # Social-App
 
+## Goal
+
+Create an Website that act like a social network. The front-end and back end part will be created based on this resource: https://www.youtube.com/watch?v=RkBfu-W7tt0&list=PLMhAeHCz8S38ryyeMiBPPUnFAiWnoPvWP
+
 ## API function
 
 To know in the first hour of the video:
@@ -24,8 +28,15 @@ hint: you require admin package. (~)
 
 9. Change the region of the api (+)
 
-10. Bild a user Registration.
+10. Bild a user Registration api.
 
+11. Bild a user Login api.
+
+12. Refactor the code.
+
+13. Add the image upload api.
+
+14. Add the additional User Data api.
 
 ### Question
 
@@ -33,3 +44,5 @@ why i cannot launch postman from the console:
 https://askubuntu.com/questions/1102213/no-in-the-uri
 https://www.tecmint.com/create-alias-in-linux/
 https://unix.stackexchange.com/questions/16242/problem-with-path-and-executable-file#16248
+What is busboy?
+https://www.npmjs.com/package/busboy
