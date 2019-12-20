@@ -5,6 +5,7 @@ const firebase = require('firebase');
 firebase.initializeApp(config);
 
 exports.signIn = (req, res) => {
+	console.log('here');
 	const credentials = {
 		email: req.body.email,
 		password: req.body.password
@@ -18,6 +19,7 @@ exports.signIn = (req, res) => {
 			return data.user.getIdToken();
 		})
 		.then(token => {
+			console.log('I am here');
 			return res.json({token});
 		})
 		.catch (err => {
@@ -119,6 +121,7 @@ exports.getAuthentificatedUser = (req,res) => {
 			res.status(500).json({error: err.code});
 		});
 };
+
 exports.uploadImage = (req, res) => {
 	const BusBoy = require('busboy');
 	const path = require('path');
@@ -166,5 +169,4 @@ exports.uploadImage = (req, res) => {
 	});
 	busboy.end(req.rawBody);
 };
-
 
